@@ -14,20 +14,27 @@ cc_library(
     name = "RomanBankApp",
     srcs = ["RomanBankApp.cpp"],
     hdrs = ["RomanBankApp.hpp"],
-    deps = [
-        "RomanBank",
-        "RomanCalculator",
-    ],
+    deps =
+        [
+            "RomanBank",
+            "RomanCalculator",
+        ],
 )
 
 cc_test(
     name = "RomanCalculator_Test",
     srcs = ["RomanCalculator_Test.cpp"],
-    deps = ["RomanCalculator", "@gtest//:gtest_main"],
+    deps = [
+        "RomanCalculator",
+        "@gtest//:gtest_main",
+    ],
 )
 
 cc_test(
     name = "RomanBankApp_Test",
     srcs = ["RomanBankApp_Test.cpp"],
-    deps = ["RomanBankApp", "@gtest//:gtest_main"],
+    deps = [
+        "RomanBankApp",
+        "@gtest//:gtest_main",
+    ],
 )

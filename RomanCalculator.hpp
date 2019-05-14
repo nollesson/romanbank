@@ -4,8 +4,5 @@
 
 class RomanCalculator {
 public:
-    std::string add(std::string a, std::string b)
-    {
-        return "";
-    }
+    std::string add(std::string a, std::string b);
 };
