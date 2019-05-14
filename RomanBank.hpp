@@ -1,7 +1,10 @@
+#pragma once
+
 #include <string>
 #include <unordered_map>
 
-class RomanBank {
+class RomanBank
+{
 public:
     RomanBank();
     void createAccount(std::string accountId, std::string value);
@@ -13,4 +16,3 @@ public:
 private:
     std::unordered_map<std::string, std::string> _accounts;
 };
-

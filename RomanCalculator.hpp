@@ -2,7 +2,8 @@
 
 #include <string>
 
-class RomanCalculator {
+class RomanCalculator
+{
 public:
     std::string add(std::string a, std::string b);
 };

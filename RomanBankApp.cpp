@@ -1,16 +1,25 @@
 #include "RomanBankApp.hpp"
 
-std::string withdrawMoney()
+RomanBankApp::RomanBankApp(RomanBank * romanBank) : _bank(romanBank) {}
+
+bool RomanBankApp::changeAccountValue(std::string accountId, std::string newValue)
 {
-    return "";
+    bool result = _bank->changeAccountValue(accountId, newValue);
+    return result;
 }
 
-std::string getTotalSavings()
+std::string RomanBankApp::getTotalSavings()
 {
-    return "";
+    std::string sum = "";
+    for (auto accountId : _accountIds)
+    {
+        std::string accountValue = _bank->getValueInAccount(accountId);
+        sum = _calculator.add(sum, accountValue);
+    }
+    return sum;
 }
 
-std::string getSavingsInGreekCurrency()
+std::string RomanBankApp::getSavingsInGreekCurrency(std::string accountId)
 {
-    return "";
+    return _bank->getSavingsInGreekCurrency(accountId);
 }

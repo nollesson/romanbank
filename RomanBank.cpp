@@ -1,8 +1,8 @@
 #include "RomanBank.hpp"
 
-#include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 RomanBank::RomanBank()
 {
@@ -16,6 +16,7 @@ void RomanBank::createAccount(std::string accountId, std::string value)
 
 bool RomanBank::changeAccountValue(std::string accountId, std::string newValue)
 {
+    sleep(10);
     if (_accounts.find(accountId) != _accounts.end())
     {
         _accounts[accountId] = newValue;
@@ -26,7 +27,6 @@ bool RomanBank::changeAccountValue(std::string accountId, std::string newValue)
 
 std::string RomanBank::getValueInAccount(std::string accountId)
 {
-    sleep(1);
     if (_accounts.find(accountId) != _accounts.end())
     {
         return _accounts[accountId];
