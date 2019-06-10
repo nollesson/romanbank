@@ -2,8 +2,8 @@
 
 #include <gtest/gtest.h>
 
-TEST(RomanCalulator, addShouldReturnEmptyString)
+TEST(RomanCalulator, GivenIplusI_ShouldReturnII)
 {
     RomanCalculator calculator;
-    EXPECT_EQ(calculator.add("I", "I"), "");
+    EXPECT_EQ(calculator.add("I", "I"), "II");
 }
