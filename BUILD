@@ -21,6 +21,15 @@ cc_library(
         ],
 )
 
+cc_library(
+    name = "RomanBank_Mock",
+    hdrs = ["RomanBank_Mock.hpp"],
+    deps = [
+        "RomanBank",
+        "@gtest//:gtest_main",
+    ],
+)
+
 cc_test(
     name = "RomanCalculator_Test",
     srcs = ["RomanCalculator_Test.cpp"],
@@ -34,6 +43,7 @@ cc_test(
     name = "RomanBankApp_Test",
     srcs = ["RomanBankApp_Test.cpp"],
     deps = [
+        "RomanBank_Mock",
         "RomanBankApp",
         "@gtest//:gtest_main",
     ],
